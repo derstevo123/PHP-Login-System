@@ -1,4 +1,9 @@
-<?php echo "Hello World"; ?>
+<?php 
+    //Allow the config
+    define('___CONFIG___', true);
+    require_once "inc/config.php" 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,30 +16,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/css/uikit.min.css" />
 </head>
 <body>
-<div class="uk-section uk-container">
-        <div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1" uk-grid="">
-            <form class="uk-form-stacked js-login">
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="form-stacked-text">Email</label>
-                    <div class="uk-form-controls">
-                        <input class="uk-input" id="form-stacked-text" type="email"  required="required" placeholder="email@email.com">
-                    </div>
-                </div>
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="form-stacked-text">Password</label>
-                    <div class="uk-form-controls">
-                        <input class="uk-input" id="form-stacked-text" type="password" required="required" placeholder="Your Password">
-                    </div>
-                </div>
-                <div class="uk-margin">
-                    <button class="uk-button uk-button-default" type="submit">Login</button>
-                </div>
-            </form>
-        </div>
-
+    <div class="uk-section uk-container">
+        <?php 
+            echo "Hello world. Today is: ";
+            echo date("Y m d");
+        ?>  
+        <p>
+            <a href="/login.php">Login</a>
+            <a href="/register.php">Register</a>
+        </p>
     </div>
-    <!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/uikit-icons.min.js"></script>
+    <?php require_once "inc/footer.php"; ?> 
 </body>
 </html>
