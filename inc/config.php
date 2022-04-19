@@ -6,4 +6,8 @@
     }
     //our config below
     
+    //include the DB.php file;
+    include_once "classes/DB.php";
+
+    $con = DB::getConnection();
 ?>
