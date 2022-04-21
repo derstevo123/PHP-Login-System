@@ -1,6 +1,7 @@
 <?php 
     //Allow the config
     define('___CONFIG___', true);
+    
     require_once "inc/config.php" 
 
 ?>
