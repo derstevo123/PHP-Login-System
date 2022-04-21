@@ -3,9 +3,7 @@
     define('___CONFIG___', true);
     
     require_once "inc/config.php";
-
-    echo($_SESSION['user_id']."is your user id ");
-
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">

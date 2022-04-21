@@ -9,6 +9,7 @@
         session_start();
     }
 
+  
     //our config below
     //allow errors
         error_reporting(-1);
@@ -17,5 +18,6 @@
     
    include_once "classes/DB.php";
    include_once "classes/Filter.php";
+   include_once "functions.php";
     $con = DB::getConnection();
 ?>
