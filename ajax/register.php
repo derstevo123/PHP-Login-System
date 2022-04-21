@@ -6,7 +6,7 @@
     //allways return json format
     
     
-    if($_SERVER['REQUEST_METHOD'] == 'POST' or 1 ===1) {
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('Content-Type: application/json');
         $return = [];
 

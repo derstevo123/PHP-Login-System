@@ -25,7 +25,7 @@ $(document).on("submit", "form.js-register, form.js-login", function(event) {
     //assuming the programm runs through. Ajax starts here
     $.ajax({
         type: 'POST',
-        url: (_form.hasClass('js-login')) ? '/ajax/register.php' : '/ajax/register.php',
+        url: (_form.hasClass('js-login')) ? '/ajax/login.php' : '/ajax/register.php',
         data: dataObj,
         dataType:'json',
         async: true,
@@ -37,7 +37,7 @@ $(document).on("submit", "form.js-register, form.js-login", function(event) {
             window.location = data.redirect;
         } else if (data.error !== undefined) {
             _error
-                .text(data.error)
+                .html(data.error)
                 .show();
         }
         alert(data.name);
